@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Logic Problem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .counter-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .counter-display {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            border: 3px solid #007bff;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .dec {
+            background-color: #dc3545;
+            color: white;
+        }
+        
+        .dec:hover {
+            background-color: #c82333;
+        }
+        
+        .reset {
+            background-color: #6c757d;
+            color: white;
+        }
+        
+        .reset:hover {
+            background-color: #5a6268;
+        }
+        
+        .inc {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .inc:hover {
+            background-color: #218838;
+        }
+        
+        .problem {
+            color: #dc3545;
+        }
+        
+        .fixed {
+            color: #28a745;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+
+    <div class="counter-container">
+        <div class="counter-display" id="res2">0</div>
+        <div class="buttons">
+            <button class="dec" id="dec2">Decrease</button>
+            <button class="reset" id="reset2">Reset</button>
+            <button class="inc" id="inc2">Increase</button>
+        </div>
+        
+    </div>
+
+    <script>
+    
+
+        // FIXED VERSION
+        let count2 = 0;
+        document.getElementById("res2").textContent = count2;
+
+        document.getElementById("dec2").onclick = function () {
+            count2--;
+            document.getElementById("res2").textContent = count2; // Shows CURRENT value
+            document.getElementById("debug2").textContent = `Display shows: ${document.getElementById("res2").textContent}, count2 is: ${count2} ✅`;
+        }
+
+        document.getElementById("reset2").onclick = function () {
+            count2 = 0;
+            document.getElementById("res2").textContent = count2;
+        }
+
+        document.getElementById("inc2").onclick = function () {
+            count2++;
+            document.getElementById("res2").textContent = count2; // Shows CURRENT value
+            document.getElementById("debug2").textContent = `Display shows: ${document.getElementById("res2").textContent}, count2 is: ${count2} ✅`;
+        }
+
+        
+    </script>
+</body>
+</html>
